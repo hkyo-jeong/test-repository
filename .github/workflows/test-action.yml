@@ -34,3 +34,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Runs a set of custom commands using the runners shell
+      - name: Run custom command
+        run: |
+          echo "Hello World! Github Actions"
+          echo ENV : "${{ vars.MESSAGE }}"
+          echo APP_SECRET : "${{ secrets.APP_SECRET }}"
